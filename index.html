@@ -1,0 +1,178 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800"
+    />
+    <title>BirdView</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style>
+      /* Carrossel estilo */
+      .carousel-container {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+      }
+
+      .carousel-slide {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .carousel-item {
+        min-width: 100%;
+        box-sizing: border-box;
+      }
+      .OrganizarTexto{
+        text-align: start;
+        margin: 20px;
+      }
+      .TextoContainer
+      {
+        display: flex;
+        flex-flow: column wrap;
+        
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="relative flex size-full min-h-screen flex-col bg-white justify-between group/design-root overflow-x-hidden"
+      style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'
+    >
+      <div>
+        <div class="flex items-center bg-white p-4 pb-2 justify-between">
+          <h2 class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pl-12 pr-12">BirdView</h2>
+        </div>
+        <div class="carousel-container p-4">
+          <div style="margin-right: 20px" class="carousel-slide" id="carouselSlide">
+            <div class="carousel-item flex h-full flex-col gap-4 rounded-lg">
+              <div
+                class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                style='background-image: url("AraraAzul.jpg");'
+              ></div>
+              <div>
+                <p class="text-[#111418] text-base font-medium leading-normal">Arara Azul</p>
+                <p class="text-[#60758a] text-sm font-normal leading-normal">Encontrada na Bahia, Minas Gerais e São Paulo, mas também nas regiões norte e centro-oeste.</p>
+              </div>
+            </div>
+            <div class="carousel-item flex h-full flex-col gap-4 rounded-lg">
+              <div
+                class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                style='background-image: url("AraraVermelha.jpg");'
+              ></div>
+              <div>
+                <p class="text-[#111418] text-base font-medium leading-normal">Arara Vermelha</p>
+                <p class="text-[#60758a] text-sm font-normal leading-normal">Encontrada na Bahia, Minas Gerais e São Paulo, mas também nas regiões norte e centro-oeste.</p>
+              </div>
+            </div>
+            <div class="carousel-item flex h-full flex-col gap-4 rounded-lg">
+              <div
+                class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                style='background-image: url("PassaroVermelho.jpg");'
+              ></div>
+              <div>
+                <p class="text-[#111418] text-base font-medium leading-normal">Loriinae</p>
+                <p class="text-[#60758a] text-sm font-normal leading-normal">Uma ave nativa do sudeste Asiático e da Oceania.</p>
+              </div>
+              
+            </div>
+              <div class="carousel-item flex h-full flex-col gap-4 rounded-lg">
+              <div
+                class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                style='background-image: url("PavaoDeFrente.jpg");'
+              ></div>
+              <div>
+                <p class="text-[#111418] text-base font-medium leading-normal">Pavão</p>
+                <p class="text-[#60758a] text-sm font-normal leading-normal">Ave rara originária da Indonésia, encontrada também em Miamar, Tailândia, Camboja e Malásia e Brasil.</p>
+              </div>
+            </div>
+              <div class="carousel-item flex h-full flex-col gap-4 rounded-lg">
+              <div
+                class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                style='background-image: url("Codorna.jpg");'
+              ></div>
+              <div>
+                <p class="text-[#111418] text-base font-medium leading-normal">Codorna</p>
+                <p class="text-[#60758a] text-sm font-normal leading-normal">As codornas são originárias do norte da África, da Europa e da Ásia.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="Texto-Container">
+        <h1 style="font-size: 20px; text-align: center; margin-bottom: 20px">Características das Aves</h1>
+        <p class="OrganizarTexto"><strong>Penas:</strong> São exclusivas das aves e essenciais para o voo, isolamento térmico e, em algumas espécies, para a camuflagem ou atração de parceiros.</p>
+        
+        <p class="OrganizarTexto"><strong>Ossos Pneumáticos:</strong> Ossos leves e cheios de cavidades, adaptados para reduzir o peso do corpo e facilitar o voo.</p>
+        
+        <p class="OrganizarTexto"><strong>Bico:</strong> As aves possuem bicos que variam em forma e função, dependendo da dieta. Existem bicos específicos para quebra de sementes (pardais) ou perfuração de árvores (pica-pau).</p>
+        
+        <p class="OrganizarTexto"><strong>Endotermia:</strong> As aves são endotérmicas, regulando a própria temperatura corporal.</p>
+        
+        <p class="OrganizarTexto"><strong>Membros Adaptados:</strong> As asas (membros anteriores) são adaptadas ao voo, embora algumas espécies não voem, como avestruzes e pinguins.</p>
+         </div>
+        </div>
+      </div>
+      <div>
+        <div class="flex gap-2 border-t border-[#f0f2f5] bg-white px-4 pb-3 pt-2"></div>
+        <div class="h-5 bg-white"></div>
+      </div>
+    </div>
+
+    <script>
+      const carouselSlide = document.getElementById("carouselSlide");
+      const carouselItems = document.querySelectorAll(".carousel-item");
+      let currentIndex = 0;
+      let startX, currentTranslate, prevTranslate, animationID;
+
+      // Função para mostrar a próxima imagem automaticamente
+      function showNextImage() {
+        currentIndex = (currentIndex + 1) % carouselItems.length;
+        updateCarousel();
+      }
+
+      // Atualiza a posição do carrossel
+      function updateCarousel() {
+        const offset = -currentIndex * 100;
+        carouselSlide.style.transform = `translateX(${offset}%)`;
+      }
+
+      // Deslize automático a cada 4 segundos
+      let autoSlide = setInterval(showNextImage, 4000);
+
+      // Event Listeners para deslizar manualmente
+      carouselSlide.addEventListener("touchstart", touchStart);
+      carouselSlide.addEventListener("touchmove", touchMove);
+      carouselSlide.addEventListener("touchend", touchEnd);
+
+      // Funções de toque para deslizar
+      function touchStart(event) {
+        startX = event.touches[0].clientX;
+        prevTranslate = -currentIndex * 100;
+        clearInterval(autoSlide); // Pausa o deslize automático
+      }
+
+      function touchMove(event) {
+        const currentX = event.touches[0].clientX;
+        const diffX = currentX - startX;
+        carouselSlide.style.transform = `translateX(${prevTranslate + (diffX / window.innerWidth) * 100}%)`;
+      }
+
+      function touchEnd() {
+        const endTranslate = parseFloat(carouselSlide.style.transform.replace("translateX(", "").replace("%)", ""));
+        if (endTranslate - prevTranslate < -30) {
+          currentIndex = Math.min(currentIndex + 1, carouselItems.length - 1);
+        } else if (endTranslate - prevTranslate > 30) {
+          currentIndex = Math.max(currentIndex - 1, 0);
+        }
+        updateCarousel();
+        autoSlide = setInterval(showNextImage, 4000); // Retoma o deslize automático
+      }
+    </script>
+  </body>
+</html>
