@@ -19,7 +19,9 @@
         width: 100%;
         position: relative;
       }
-
+      .correct {
+        color: green;
+      }
       .carousel-slide {
         display: flex;
         transition: transform 0.5s ease-in-out;
@@ -271,6 +273,58 @@
   <p class="OrganizarTexto">Strigiformes: coruja</p>
 </div>
 </div>
+<div style="display:flex;flex-flow: column wrap; justify-content: center; margin: 20px;">
+ <h2>1) As aves apresentam algumas características peculiares, como a presença de penas, que funcionam como isolante térmico, além de auxiliar o voo. Marque a única alternativa que não representa uma adaptação ao voo.</h2>
+    <form id="quizForm">
+        <input type="radio" id="a" name="resposta" value="a">
+        <label for="a">a) Sacos aéreos.</label><br>
+
+        <input type="radio" id="b" name="resposta" value="b">
+        <label for="b">b) Ossos pneumáticos.</label><br>
+
+        <input type="radio" id="c" name="resposta" value="c">
+        <label for="c">c) Asas.</label><br>
+
+        <input type="radio" id="d" name="resposta" value="d">
+        <label for="d">d) Siringe.</label><br>
+
+        <input type="radio" id="e" name="resposta" value="e">
+        <label for="e">e) Quilha.</label><br>
+    </form>
+    
+    <h2>2) Nas aves aparece uma característica, que também é presente em mamíferos, chamada de endotermia ou homeotermia. Essa característica está relacionada com:</h2>
+    <form id="quizForm1">
+        <input type="radio" id="q1a" name="resposta1" value="a">
+        <label for="q1a">a) a capacidade de manter a temperatura do corpo constante através do calor do ambiente.</label><br>
+
+        <input type="radio" id="q1b" name="resposta1" value="b">
+        <label for="q1b">b) a necessidade de se manter em locais quentes para se aquecer.</label><br>
+
+        <input type="radio" id="q1c" name="resposta1" value="c">
+        <label for="q1c">c) a necessidade de se manter em ambientes frios para refrescar o corpo.</label><br>
+
+        <input type="radio" id="q1d" name="resposta1" value="d">
+        <label for="q1d">d) a capacidade de manter a temperatura do corpo constante através do seu metabolismo.</label><br>
+    </form>
+
+    <h2>3) As aves são animais que não possuem dentes e, portanto, não conseguem triturar o alimento antes de engoli-lo. A digestão mecânica nesses animais ocorre em uma porção do sistema digestório chamada de:</h2>
+    <form id="quizForm2">
+        <input type="radio" id="q2a" name="resposta2" value="a">
+        <label for="q2a">a) proventrículo.</label><br>
+
+        <input type="radio" id="q2b" name="resposta2" value="b">
+        <label for="q2b">b) papo.</label><br>
+
+        <input type="radio" id="q2c" name="resposta2" value="c">
+        <label for="q2c">c) moela.</label><br>
+
+        <input type="radio" id="q2d" name="resposta2" value="d">
+        <label for="q2d">d) siringe.</label><br>
+
+        <input type="radio" id="q2e" name="resposta2" value="e">
+        <label for="q2e">e) estômago.</label><br>
+    </form>
+    </div>
 <h2 class="Subtitulo">Vídeo sobre as Aves - Curiosidades</h2>
 <p class="OrganizarTexto">
   Assista ao vídeo sobre curiosidades das aves:
@@ -338,6 +392,46 @@
         updateCarousel();
         autoSlide = setInterval(showNextImage, 4000); // Retoma o deslize automático
       }
+      
+      document.getElementById("quizForm").addEventListener("change", function(event) {
+    // Remover a classe "correct" de todas as opções
+    document.querySelectorAll("label").forEach(label => {
+        label.classList.remove("correct");
+    });
+
+    // Verificar se a resposta selecionada é a correta
+    const selectedOption = event.target;
+    if (selectedOption.id === "d") {
+        document.querySelector(`label[for="${selectedOption.id}"]`).classList.add("correct");
+    }
+});
+// Questão 1: Endotermia ou Homeotermia
+document.getElementById("quizForm1").addEventListener("change", function(event) {
+    // Remover a classe "correct" de todas as opções
+    document.querySelectorAll("#quizForm1 label").forEach(label => {
+        label.classList.remove("correct");
+    });
+
+    // Verificar se a resposta selecionada é a correta (alternativa "d")
+    const selectedOption = event.target;
+    if (selectedOption.id === "q1d") {
+        document.querySelector(`label[for="${selectedOption.id}"]`).classList.add("correct");
+    }
+});
+
+// Questão 2: Digestão Mecânica
+document.getElementById("quizForm2").addEventListener("change", function(event) {
+    // Remover a classe "correct" de todas as opções
+    document.querySelectorAll("#quizForm2 label").forEach(label => {
+        label.classList.remove("correct");
+    });
+
+    // Verificar se a resposta selecionada é a correta (alternativa "c")
+    const selectedOption = event.target;
+    if (selectedOption.id === "q2c") {
+        document.querySelector(`label[for="${selectedOption.id}"]`).classList.add("correct");
+    }
+});
     </script>
   </body>
 </html>
