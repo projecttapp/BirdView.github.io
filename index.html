@@ -11,6 +11,7 @@
     <title>BirdView</title>
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="main.js"></script>
     <style>
       /* Carrossel estilo */
       .carousel-container {
@@ -54,6 +55,48 @@
         justify-content: center;
         
       }
+      
+      .grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajusta para um lado a lado em desktop */
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.grid-item {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  
+  transition: transform 0.3s ease-in-out;
+}
+
+.grid-item:hover {
+  transform: translateY(-10px);
+}
+
+.grid-item-title {
+  font-size: 1.25rem;
+  color: #111814;
+  margin-bottom: 0.5rem;
+}
+
+.grid-item p {
+  font-size: 1rem;
+  color: #638872;
+}
+
+a {
+  color: #308073;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
     </style>
   </head>
   <body>
@@ -136,6 +179,7 @@
 <h1 class="Subtitulo">Estrutura Esquelética</h1>
 <p class="OrganizarTexto">Ossos Pneumáticos: Ossos ocos que reduzem o peso corporal.</p>
 <p class="OrganizarTexto">Quilha (Carena): Projeção no osso esterno onde os músculos peitorais se conectam, permitindo o movimento das asas.</p>
+<img style="margin: 0 auto;" src="osso.png" alt="">
 
 <h1 class="Subtitulo">Bico e Digestão</h1>
 <p class="OrganizarTexto">Bico Adaptado: Em vez de dentes, o bico é especializado para o tipo de alimentação.</p>
@@ -143,10 +187,13 @@
 
 <h1 class="Subtitulo">Respiração e Sacos Aéreos</h1>
 <p class="OrganizarTexto">Os pulmões compactos das aves são conectados a sacos aéreos, que reduzem o peso e atuam como reserva de ar.</p>
+<img style="margin: 0 auto;" src="pulmao.png" alt="">
 
 <h1 class="Subtitulo">Excreção e Circulação</h1>
 <p class="OrganizarTexto">Sistema Excretor: Rins excretam ácido úrico; as aves não possuem bexiga urinária.</p>
 <p class="OrganizarTexto">Circulação Sanguínea: Coração com dois átrios e dois ventrículos, circulação dupla e completa.</p>
+<img style="margin: 0 auto;" src="passarinhoDentro.png" alt="Pássaro por dentro.">
+<img style="margin: 0 auto;" src="galinhaPorDentro.png" alt="galinha por dentro.">
 
 <h1 class="Subtitulo">Endotermia e Comunicação</h1>
 <p class="OrganizarTexto">Aves são endotérmicas e usam o canto para comunicação, produzido pela siringe, uma estrutura na traqueia.</p>
@@ -336,6 +383,17 @@
          </div>
         </div>
       </div>
+      
+      
+      <div class="grid-container">
+  <div onclick="IrPara()" class="grid-item">
+    <h4 class="grid-item-title">Reduzir o uso de plástico</h4>
+    <p>Evitar produtos plásticos descartáveis</p>
+  </div>
+  </div>
+  
+</div>
+      
       <div>
         <div class="flex gap-2 border-t border-[#f0f2f5] bg-white px-4 pb-3 pt-2"></div>
         <div class="h-5 bg-white"></div>
